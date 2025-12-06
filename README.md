@@ -1,4 +1,4 @@
-# Advanced Time-Sharing Operating System Simulator
+# Time-Sharing Operating System Simulator
 
 A comprehensive, feature-rich simulation of time-sharing operating system concepts implemented in C using POSIX user contexts (`ucontext`). This project demonstrates various CPU scheduling algorithms, resource management, and process state management.
 
