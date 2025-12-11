@@ -4,17 +4,17 @@ A comprehensive, feature-rich simulation of time-sharing operating system concep
 
 ## 📋 Table of Contents
 
-- [Features](#features)
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Scheduling Algorithms](#scheduling-algorithms)
-- [Task Types](#task-types)
-- [System Architecture](#system-architecture)
-- [Statistics and Metrics](#statistics-and-metrics)
-- [Examples](#examples)
-- [Technical Details](#technical-details)
-- [Contributing](#contributing)
+- [Features]
+- [Project Structure]
+- [Installation]
+- [Usage]
+- [Scheduling Algorithms]
+- [Task Types]
+- [System Architecture]
+- [Statistics and Metrics]
+- [Examples]
+- [Technical Details]
+- [Contributing]
 
 ## ✨ Features
 
