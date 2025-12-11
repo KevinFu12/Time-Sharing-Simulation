@@ -31,9 +31,9 @@ int main(int argc, char **argv) {
     srand(time(NULL));
     
     printf("================================================================================\n");
-    printf("         Advanced Time-Sharing Operating System Simulator\n");
+    printf("                     Time-Sharing Operating System Simulator\n");
     printf("================================================================================\n");
-    printf("Configuration:\n");
+    printf("CONFIGURATION:\n");
     printf("  Tasks: %d | Quantum: %dms | Algorithm: %s | Verbose: %s\n",
            n, quantum_ms,
            sched_algo == SCHED_ROUND_ROBIN ? "Round Robin" :
@@ -72,7 +72,7 @@ int main(int argc, char **argv) {
                i, type_to_string(type), priority, workload);
     }
     
-    printf("\nStarting simulation...\n\n");
+    printf("\nBEGINNING SIMULATION\n\n");
     
     // Install timer and start
     install_timer(quantum_ms);
@@ -86,7 +86,7 @@ int main(int argc, char **argv) {
         exit(1);
     }
     
-    printf("\nAll tasks completed!\n");
+    printf("\nALL TASKS COMPLETED\n");
     disable_timer();
     print_statistics();
     cleanup();
