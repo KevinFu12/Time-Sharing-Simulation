@@ -307,7 +307,7 @@ ID  Type  Pri  State CPU(ms) Turn(ms) Preempt Yield Block Queue/VRT
 ### Memory Management
 - Each task has 128KB stack (configurable)
 - Dynamic allocation with proper cleanup
-- No memory leaks (verified with valgrind recommended)
+- No memory leaks (verified with valgrind)
 
 ### Signal Handling
 - Async-signal-safe operations in handler
@@ -333,7 +333,7 @@ ID  Type  Pri  State CPU(ms) Turn(ms) Preempt Yield Block Queue/VRT
 ## 🐛 Known Limitations
 
 1. **Signal Safety**: Limited operations in signal handler
-2. **Precision**: Timer resolution limited by OS (typically ~1ms)
+2. **Precision**: Timer resolution limited by OS 
 3. **Platform**: Requires POSIX-compliant systems (Linux/Unix)
 4. **ucontext Deprecation**: Uses deprecated API (still widely supported)
 
@@ -377,5 +377,3 @@ This project is created for educational purposes. Feel free to use and modify fo
 - Enhanced with modern scheduling algorithms and comprehensive statistics
 
 ---
-
-**Note**: This is a simulation for educational purposes. Real operating systems implement these concepts with additional complexity, hardware support, and optimizations.
