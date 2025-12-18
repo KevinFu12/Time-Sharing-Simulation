@@ -2,7 +2,7 @@
 
 A comprehensive, feature-rich simulation of time-sharing operating system concepts implemented in C using POSIX user contexts (`ucontext`). This project demonstrates various CPU scheduling algorithms, resource management, and process state management.
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Features]
 - [Project Structure]
@@ -16,7 +16,7 @@ A comprehensive, feature-rich simulation of time-sharing operating system concep
 - [Technical Details]
 - [Contributing]
 
-## ✨ Features
+## Features
 
 ### Core Capabilities
 - **5 Scheduling Algorithms**: Round Robin, Priority, Multilevel Feedback Queue (MLFQ), Lottery, and Completely Fair Scheduler (CFS)
@@ -35,7 +35,7 @@ A comprehensive, feature-rich simulation of time-sharing operating system concep
 - Voluntary yielding and sleeping
 - I/O operation simulation with blocking
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 timeshare/
@@ -54,7 +54,7 @@ timeshare/
 - **task.c**: Handles task creation, workload execution, and task lifecycle operations
 - **main.c**: Parses arguments, initializes the system, and starts the simulation
 
-## 🚀 Installation
+## Installation
 
 ### Prerequisites
 - GCC compiler (with C11 support)
@@ -77,7 +77,7 @@ make clean
 make clean && make
 ```
 
-## 💻 Usage
+## Usage
 
 ### Command Syntax
 ```bash
@@ -106,7 +106,7 @@ make clean && make
 ```
 This runs 8 tasks with 50ms quantum using MLFQ without verbose output.
 
-## 🔄 Scheduling Algorithms
+## Scheduling Algorithms
 
 ### 1. Round Robin (RR)
 - **Description**: Classic time-sharing algorithm
@@ -150,28 +150,24 @@ The simulator creates a diverse mix of tasks with different behaviors:
 - Heavy computation (square root calculations)
 - Minimal I/O operations
 - Long time slices before yielding
-- Example: Scientific computation, encoding
 
 ### I/O-Bound Tasks
 - Frequent I/O operations (simulated)
 - Short CPU bursts between I/O
 - Voluntary blocking and sleeping
-- Example: Network servers, database queries
 
 ### Mixed Tasks
 - Balanced CPU and I/O work
 - Resource acquisition/release
 - Periodic yielding
-- Example: Web applications, general applications
 
 ### Interactive Tasks
 - Short CPU bursts
 - Frequent voluntary yields
 - Simulated user interaction delays
 - Higher initial priority
-- Example: GUI applications, shells
 
-## 🏗️ System Architecture
+## System Architecture
 
 ### State Machine
 Tasks transition through multiple states:
@@ -202,7 +198,7 @@ READY → RUNNING → [BLOCKED/SLEEPING/FINISHED]
 - Automatic release on task exit
 - Deadlock potential (for demonstration)
 
-## 📊 Statistics and Metrics
+## Statistics and Metrics
 
 The simulator tracks comprehensive statistics:
 
@@ -250,7 +246,7 @@ ID  Type  Pri  State CPU(ms) Turn(ms) Preempt Yield Block Queue/VRT
 ...
 ```
 
-## 🎮 Examples
+## Examples
 
 ### Example 1: Compare Algorithms
 ```bash
@@ -291,7 +287,7 @@ ID  Type  Pri  State CPU(ms) Turn(ms) Preempt Yield Block Queue/VRT
 ./timeshare 15 50 1 0
 ```
 
-## 🔧 Technical Details
+## Technical Details
 
 ### Key Technologies
 - **POSIX ucontext API**: User-level context switching
@@ -314,7 +310,7 @@ ID  Type  Pri  State CPU(ms) Turn(ms) Preempt Yield Block Queue/VRT
 - Context saving during preemption
 - Re-entrant safe statistics updates
 
-## 📈 Performance Considerations
+## Performance Considerations
 
 ### Scalability
 - Supports up to 64 concurrent tasks
@@ -330,34 +326,7 @@ ID  Type  Pri  State CPU(ms) Turn(ms) Preempt Yield Block Queue/VRT
 #define HISTORY_SIZE 1000         // Event history buffer
 ```
 
-## 🐛 Known Limitations
-
-1. **Signal Safety**: Limited operations in signal handler
-2. **Precision**: Timer resolution limited by OS 
-3. **Platform**: Requires POSIX-compliant systems (Linux/Unix)
-4. **ucontext Deprecation**: Uses deprecated API (still widely supported)
-
-## 🔬 Educational Value
-
-This project demonstrates:
-- Operating system scheduling algorithms
-- Process/thread context switching
-- Resource management and synchronization
-- System call interfaces (signals, timers)
-- Performance metric collection
-- Real-time constraints and deadlines
-
-### Course Topics Covered
-- Process scheduling
-- Context switching
-- Preemptive multitasking
-- Priority inversion
-- Resource allocation
-- Deadlock scenarios
-- Performance analysis
-- System design patterns
-
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Areas for contribution:
 - New scheduling algorithms
@@ -366,14 +335,5 @@ Contributions are welcome! Areas for contribution:
 - Bug fixes
 - Documentation improvements
 - Test cases
-
-## 📜 License
-
-This project is created for educational purposes. Feel free to use and modify for academic projects.
-
-## 👥 Authors
-
-- Original implementation based on time-sharing OS concepts
-- Enhanced with modern scheduling algorithms and comprehensive statistics
 
 ---
